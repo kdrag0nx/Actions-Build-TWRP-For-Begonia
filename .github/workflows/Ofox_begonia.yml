@@ -24,7 +24,6 @@ env:
   ProductFileHeader: twrp
   target: recoveryimage
   WorkSpace: WorkSpace
-  TZ: Asia/Shanghai
   Author: ${{github.actor}}
   Delete_old: false
 
@@ -43,8 +42,8 @@ jobs:
           sudo -E apt-get -qq update
           sudo -E apt-get -qq install curl libstdc++6 git wget repo rsync aria2
           echo "::endgroup::"
-          git config --global user.name "${{github.actor}}"
-          git config --global user.email "1844766234@qq.com"
+          git config --global user.name "kdrag0nx"
+          git config --global user.email "amitkv1212@gmail.com"
           git clone https://github.com/akhilnarang/scripts --depth=1 --single-branch
           cd scripts
           echo "::group::Setup Build Env"
@@ -110,8 +109,8 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
           export LC_ALL="C"
-          export OF_MAINTAINER="RC1844"
-          export FOX_VERSION="Unofficial"
+          export OF_MAINTAINER="kdrag0nx"
+          export FOX_VERSION="Community"
           export OF_SCREEN_H=2160
           export OF_PATCH_AVB20=1
           echo "::endgroup::"
